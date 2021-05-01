@@ -1,0 +1,18 @@
+.home-container {
+  position: relative;
+
+  .home-content {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -100;
+
+    .home-content-hero {
+      width: 40%;
+    }
+
+    .home-content-form {
+      width: 60%;
+    }
+  }
+}

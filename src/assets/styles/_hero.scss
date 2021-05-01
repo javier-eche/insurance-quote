@@ -1,0 +1,63 @@
+.hero-background {
+  background-image: url("./../images/backgroundlarge.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+
+  .hero-avatar {
+    display: flex;
+    justify-content: center;
+    padding-top: 20%;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .hero-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .hero-title {
+      padding: 24px 64px 0px 120px;
+    }
+  
+    .hero-heading1 {
+      color: $gray1;
+      font-family: 'Lato';
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  
+    .hero-heading2 {
+      color: $gray1;
+      font-family: 'Lato';
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 48px;
+    }
+  
+    .hero-description {
+      color: $gray2;
+      font-family: 'Roboto';
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  
+    .hero-copyrigth {
+      display: flex;
+      justify-content: center;
+      color: $gray3;
+      font-family: 'Roboto';
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+
+}
