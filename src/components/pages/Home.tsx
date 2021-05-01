@@ -1,7 +1,11 @@
+import Header from "../UI/Header";
+
 function Home(){
 
   return (
-    <></>
+    <>
+      <Header />
+    </>
   );
   
 }
