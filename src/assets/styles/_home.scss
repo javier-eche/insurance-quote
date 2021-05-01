@@ -2,6 +2,7 @@
   position: relative;
 
   .home-content {
+    display: flex;
     width: 100%;
     position: absolute;
     top: 0;
@@ -12,7 +13,58 @@
     }
 
     .home-content-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 112px;
       width: 60%;
+
+      .home-content-form-title {
+        width: 288px;
+      }
+
+      .home-form{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;    
+        width: 288px;
+        height: auto;
+
+        .home-form-input {
+          border: 1px solid $inputcolor;
+          border-radius: 4px;
+          color: $gray3;
+          font-family: 'Lato';
+          font-size: 16px;
+          height: 56px;
+          line-height: 24px;
+          padding: 16px;
+          width: 100%;
+        }
+
+        .home-form-checkbox {
+          color: $gray2;
+          display: flex;
+          font-family: 'Roboto';
+          font-weight: 300;
+          font-size: 12px;
+          line-height: 20px;
+          gap: 18px;
+          width: 100%;
+        }
+
+        .home-form-btn-submit {
+          background: $secondary;
+          border-radius: 8px;
+          color: #fff;
+          font-family: 'Lato';
+          font-weight: 700;
+          font-size: 14px;
+          height: 56px;
+          line-height: 16px;
+          width: 192px;
+        }
+      }
     }
   }
 }
