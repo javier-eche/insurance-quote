@@ -1,13 +1,15 @@
 
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../assets/context/context";
 import Header from "../UI/Header";
 import Hero from "../UI/Hero";
 import Axios from 'axios';
 import { useHistory } from "react-router";
+import { RiArrowUpSLine, RiArrowDownSLine } from 'react-icons/ri';
 
 function Home(): JSX.Element{
 
+  const [showList, setShowList] = useState(false);
   const {setUser} = useContext(UserContext);
   let history = useHistory();
 
@@ -24,6 +26,10 @@ function Home(): JSX.Element{
     history.push('/enter-data')
   }
 
+  const handleClickToggleList = () => {
+    setShowList(!showList);
+  }
+
   return (
     <div className="home-container">
       <Header />
@@ -36,7 +42,21 @@ function Home(): JSX.Element{
             <h1>Déjanos tus datos</h1>
           </div>
           <form className="home-form" onSubmit={(e) => handleSubmit(e)}>
-            <input className="home-form-input" type="text" placeholder="Nro de doc"/>
+            <div className="home-form-select">
+              <div className="home-form-select-list">
+                <p>DNI</p>
+                <RiArrowDownSLine onClick={handleClickToggleList}/>
+                {showList
+                ?(<div className="list">
+                    <p>DNI</p>
+                    <p>CARNET</p>
+                    <p>PASSPORT</p>
+                  </div>
+                ):('')
+                }
+              </div>
+              <input className="home-form-input" type="text" placeholder="Nro de doc"/>
+            </div>
             <input className="home-form-input" type="text" placeholder="Celular" />
             <input className="home-form-input" type="text" placeholder="Placa" />
             <div className="home-form-checkbox">
