@@ -1,17 +1,37 @@
 
 import urlCar from './../../../assets/images/icon_car.svg';
 import { BiPlus, BiMinus } from 'react-icons/bi';
+import { useContext } from 'react';
+import { UserContext } from '../../../assets/context/context';
+import { useHistory } from 'react-router';
 
 function FirstStep(): JSX.Element {
+
+  const {user, setStep, amount, setAmount} = useContext(UserContext);
+  let history = useHistory();
+
+  const handleSubmit = (e:React.FormEvent) => {
+    e.preventDefault();
+    setStep(2);
+  }
+
+  const handleClickDecrement = () => {
+    amount <= 12500 ? setAmount(12500) : setAmount(amount - 100);
+  }
+
+  const handleClickIncrement = () => {
+    amount >= 16500 ? setAmount(16500) : setAmount(amount + 100);
+  }
+
   return (
     <>
       <div>
-        <h1>¡Hola, Juan!</h1>
+        <h1>¡Hola, {user.name.first}!</h1>
       </div>
       <div>
         <p>Completa los datos de tu auto</p>
       </div>
-      <form>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <div className="form-data-container">
           <div className="form-data-inputs">
             <div className="form-data-input">
@@ -46,9 +66,9 @@ function FirstStep(): JSX.Element {
             <p className="amount-info-limits">MIN $12,500 | MAX $16,500</p>
           </div>
           <div className="amount-controls">
-            <BiMinus className="icon" />
-            <p>$ 14,300</p>
-            <BiPlus className="icon" />
+            <BiMinus className="icon" onClick={handleClickDecrement} />
+            <p>$ {amount}</p>
+            <BiPlus className="icon" onClick={handleClickIncrement} />
           </div>
         </div>
         <button className="btn-submit">CONTINUAR</button>
