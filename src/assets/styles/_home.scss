@@ -8,8 +8,16 @@
     top: 0;
     z-index: -100;
 
+    @include small {
+      flex-direction: column;
+    }
+
     .home-content-hero {
       width: 40%;
+
+      @include small {
+        width: 100%;
+      }
     }
 
     .home-content-form {
@@ -19,8 +27,18 @@
       padding-top: 112px;
       width: 60%;
 
+      @include small {
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 54px;
+      }
+
       .home-content-form-title {
         width: 288px;
+
+        @include small {
+          padding-bottom: 24px;
+        }
       }
 
       .home-form{
@@ -63,6 +81,10 @@
           height: 56px;
           line-height: 16px;
           width: 192px;
+
+          @include small {
+            width: 100%;
+          }
         }
       }
     }

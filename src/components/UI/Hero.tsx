@@ -1,11 +1,13 @@
 import urlImageAvatar from './../../assets/images/avatarlarge.png';
+import urlAvatarSmall from './../../assets/images/avatarsmall.svg';
 
 function Hero(): JSX.Element{
 
   return (
     <div className="hero-background">
       <div className="hero-avatar">
-        <img src={urlImageAvatar} alt= ""/>
+        <img className="img-large" src={urlImageAvatar} alt= ""/>
+        <img className="img-small" src={urlAvatarSmall} alt= ""/>
       </div>
       <div className="hero-info">
         <div className="hero-title">
