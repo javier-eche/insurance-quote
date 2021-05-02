@@ -1,0 +1,197 @@
+.form-data-container {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding-top: 32px;
+
+    .form-data-inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .form-data-input {
+        border: 1px solid #C5CBE0;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        padding: 8px 16px;
+        height: 56px;
+        width: 384px;
+
+        label {
+          color: $gray3;
+          font-family: Roboto;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 16px;
+        }
+      
+        input {
+          border: none;
+          color: $gray1;
+          font-family: Lato;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }      
+    }
+
+    .help-container{
+      display: flex;
+      flex-direction: column;
+  
+      .help-title {
+        color: $gray1;
+        font-family: 'Lato';
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.6px;
+        padding-bottom: 16px;
+      }
+  
+      .help-question {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+        padding-top: 16px;
+    
+        p {
+          color: $gray1;
+          font-family: 'Lato';
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0.2px;
+        }
+  
+        img {
+          height: 64px;
+          width: 64px;
+        }
+      }
+  
+      .help-link {
+        color: $primary;
+        font-family: 'Lato';
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.8px;
+        padding-top: 16px;
+      }
+    }
+}
+
+h1 {
+    color: $gray1;
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.6px;
+    padding-bottom: 8px;
+    padding-top: 28px;
+  }
+
+  p {
+    color: $gray2;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.form-data-choose {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    width: 384px;
+
+    p {
+      color: $gray1;
+      font-family: Lato;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+    }
+
+    .form-data-isgas {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  .form-data-amount {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    width: 384px;
+
+    .amount-info{
+      display: flex;
+      flex-direction: column;
+
+      .amount-info-title {
+        color: $gray1;
+        font-family: Lato;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+      }
+
+      .amount-info-limits {
+        color: $gray2;
+        font-family: Lato;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0.6px;
+        padding-top: 4px;
+      }
+    }
+
+    .amount-controls {
+      border: 1px solid $gray4;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      height: 56px;
+      width: 160px;
+
+      .icon {
+        color: $primary;
+        font-size: 20px;
+      }
+
+      p {
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+      }
+    }
+  }
+
+  .btn-submit {
+    background-color: $secondary;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Lato';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    margin-top: 46px;
+    height: 56px;
+    width: 192px;
+  }
