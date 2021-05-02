@@ -5,8 +5,17 @@ import { IoIosArrowUp } from 'react-icons/io';
 import urlIconTheft from './../../../assets/images/icon_theft.svg';
 import urlIconCrash from './../../../assets/images/crash.svg';
 import urlIconTotal from './../../../assets/images/icon_perdidatotal.svg'
+import { useHistory } from 'react-router';
 
 function SecondStep(): JSX.Element {
+
+  let history = useHistory()
+
+  const handleSubmit = (e:React.FormEvent) => {
+    e.preventDefault();
+    history.push('/thanks');
+  }
+
   return (
     <>
       <div className="coverage-wellcome">
@@ -15,7 +24,7 @@ function SecondStep(): JSX.Element {
           <p>Conoce las coberturas para tu plan</p>
         </div>
       </div>
-      <form>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <div className="coverage-info">
           <div className="coverage-info-resume">
             <div className="info-resume">

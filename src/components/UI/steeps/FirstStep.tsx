@@ -3,12 +3,10 @@ import urlCar from './../../../assets/images/icon_car.svg';
 import { BiPlus, BiMinus } from 'react-icons/bi';
 import { useContext } from 'react';
 import { UserContext } from '../../../assets/context/context';
-import { useHistory } from 'react-router';
 
 function FirstStep(): JSX.Element {
 
   const {user, setStep, amount, setAmount} = useContext(UserContext);
-  let history = useHistory();
 
   const handleSubmit = (e:React.FormEvent) => {
     e.preventDefault();
