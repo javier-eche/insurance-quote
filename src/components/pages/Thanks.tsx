@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { UserContext } from "../../assets/context/context";
 import Header from "../UI/Header";
 import urlAvatarThanks from './../../assets/images/avatarthanks.png';
+import urlAvatarThanksMini from './../../assets/images/thansmini.png';
 
 function Thanks(): JSX.Element{
 
@@ -11,7 +12,8 @@ function Thanks(): JSX.Element{
       <Header />
       <div className="thanks-container">
         <div className="thanks-hero">
-          <img src={urlAvatarThanks} alt=""/>
+          <img className="thanks-hero-imglarge" src={urlAvatarThanks} alt=""/>
+          <img className="thanks-hero-imgsmall" src={urlAvatarThanksMini} alt=""/>
         </div>
         <div className="thanks-message">
           <div className="thanks-message-content">

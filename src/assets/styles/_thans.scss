@@ -1,6 +1,10 @@
 .thanks-container {
   display: flex;
 
+  @include small {
+    flex-direction: column;
+  }
+
   .thanks-hero {
     height: 100vh;
     background: $gray7;
@@ -8,12 +12,31 @@
     position: relative;
     width: 40%;
 
-    img {
+    @include small {
+      height: 208px;
+      width: 100%;
+    }
+
+    .thanks-hero-imglarge {
       height: 448px;
       position: absolute;
       top: 10%;
       right: -15%;
       width: 416px;
+
+      @include small {
+        display: none;
+      }
+    }
+
+    .thanks-hero-imgsmall{
+      display: none;
+
+      @include small {
+        height: 100%;
+        width: 100%;
+        display: flex;
+      }
     }
   }
 
@@ -25,8 +48,17 @@
     padding-top: 96px;
     width: 60%;
 
+    @include small {
+      padding-top: 48px;
+      width: 100%;
+    }
+
     .thanks-message-content {
       width: 480px;
+
+      @include small {
+        width: 296px;
+      }
 
       .message-content-title {
         font-family: Lato;
@@ -34,12 +66,17 @@
         font-weight: 400;
         line-height: 48px;
         letter-spacing: -0.2px;
+
+        @include small {
+          font-size: 28px;
+          line-height: 36px;
+          letter-spacing: -0.6px;
+        }
       }
 
       .message-content-description {
         font-family: Roboto;
         font-size: 16px;
-        font-style: normal;
         font-weight: 400;
         line-height: 28px;
         letter-spacing: 0px;
@@ -69,6 +106,12 @@
         letter-spacing: 0.8px;
         margin-top: 40px;
         width: 255px;
+
+        @include small {
+          height: 100%;
+          padding: 20px 32px;
+          width: 100%;
+        }
       }
     }
   }
