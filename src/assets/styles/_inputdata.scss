@@ -1,3 +1,6 @@
 .section-inputData {
   display: flex;
+  @include small {
+    flex-direction: column;
+  }
 }

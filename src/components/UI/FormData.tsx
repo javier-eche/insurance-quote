@@ -1,5 +1,6 @@
 import { FiChevronLeft } from 'react-icons/fi';
-import FirstSteep from './steeps/FirstSteep';
+// import FirstStep from './steeps/FirstStep';
+import SecondStep from './steeps/SecondStep';
 
 function FormData(): JSX.Element {
   return (
@@ -8,7 +9,8 @@ function FormData(): JSX.Element {
         <div className="form-data-back-steep"><FiChevronLeft className="icon" /></div>
         <p>VOLVER</p>
       </div>
-      <FirstSteep />
+      {/* <FirstStep /> */}
+      <SecondStep />
     </div>
   );
 }

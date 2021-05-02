@@ -1,0 +1,324 @@
+.coverage-wellcome {
+  @include small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.coverage-info {
+  display: flex;
+  gap: 96px;
+  padding-top: 44px;
+
+  @include small {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24px;
+  }
+
+  .coverage-info-resume {
+    display: flex;
+    border: 1px solid #F0F2FA;
+    border-radius: 12px;
+    height: 188px;
+    gap: 32px;
+    padding: 40px 0px 40px 32px;
+    width: 384;
+
+    @include small {
+      height: 148px;
+      padding: 24px 0px 0px 24px;
+      width: 296px;
+    }
+
+    .info-resume{
+      display: flex;
+      flex-direction: column;
+
+      .resume-placa {
+        color: $gray3;
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+      }
+  
+      .resume-brand {
+        color: $gray1;
+        font-family: Lato;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0px;
+      }
+  
+      .resume-link{
+        color: $primary;
+        font-family: Lato;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.6px;
+      }
+
+    }
+
+    .coverage-info-image {
+      position: relative;
+      height: 188px;
+      width: 86px;
+
+      @include small {
+        height: 150px;
+        width: 69px;
+      }
+
+      img {
+        height: 196px;
+        position: absolute;
+        bottom: 45px;
+        width: 86px;
+
+        @include small {
+          height: 150px;
+          width: 69px;
+        }
+      }
+    
+    }
+  }
+
+  .coverage-info-pricing {
+    .pricing-amount {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+
+      .pricing-amount-total {
+        color: $gray1;
+        font-family: Lato;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: -0.2px;
+      }
+
+      .pricing-amount-period{
+        color: $gray2;
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+      }
+    }
+
+    .pricing-plan {
+      ul {
+        list-style: none;
+
+        li {
+          color: $gray2;
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0px;
+        }
+
+        .icon-check {
+          color: $control;
+        }
+      }
+    }
+
+    @include small {
+      display: none;
+    }
+  }
+}
+
+.coverage-type {
+  display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  // width: 384px;
+  // width: 100%;
+  padding-top: 64px;
+
+  @include small {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subtitle {
+    color: $gray1;
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+  }
+
+  .coverage-option {
+    display: flex;
+    padding-top: 32px;
+
+    @include small {
+      justify-content: center;
+      width: 100%;
+    }
+
+    .coverage-tab {
+      height: 32px;
+      width: 128px;
+
+      p {
+        color: $gray1;
+        font-family: Lato;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.800000011920929px;
+        text-align: center;
+      }
+    }
+  }
+
+  .coverage-items {
+    width: 100%;
+    padding-top: 32px;
+    .coverage-item {
+      display: flex;
+      flex-direction: column;
+
+      .item-coverage {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        .item-coverage-description {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+
+          .switch-arrow {
+            color: $secondary;
+            font-size: 20px;
+
+            @include small {
+              display: none;
+            }
+          }
+
+          .switch-container {
+            display: none;
+            background: $control;
+            border-radius: 18px;
+            height: 31px;
+            width: 51px;
+
+            @include small {
+              display: flex;
+              align-items: center;
+            }
+
+            .switch{
+              background: white;
+              border-radius: 50%;
+              height: 28px;
+              width: 28px;
+            }
+          }
+        }
+
+        img {
+          padding-right: 24px;
+        }
+
+        p {
+          color: $gray1;
+          font-family: Lato;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 28px;
+          letter-spacing: 0px;
+        }
+      }
+
+      .coverage-item-case {
+        color: $gray2;
+        padding-left: 64px;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+        width: 350px;
+      }
+    }
+  }
+
+  .coverage-actions {
+    display: flex;
+    padding: 0px 16px;
+
+    @include small {
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 72px;
+      margin-bottom: 16px;
+      width: 100%;
+    }
+
+    .coverage-actions-resume{
+      display: none;
+
+      @include small {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .actions-resume-price {
+        color: $gray1;
+        font-family: Lato;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: -0.2px;
+      }
+
+      .actions-resume-period {
+        color: $gray1;
+        font-family: Lato;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.8px;
+      }
+    }
+
+    .btn-get-coverage {
+      background-color: $secondary;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-family: 'Lato';
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      height: 48px;
+      width: 224px;
+      
+      @include small {
+        height: 44px;
+        width: 168px;
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
 import urlCar from './../../../assets/images/icon_car.svg';
 import { BiPlus, BiMinus } from 'react-icons/bi';
 
-function FirstSteep(): JSX.Element {
+function FirstStep(): JSX.Element {
   return (
     <>
       <div>
@@ -57,4 +57,4 @@ function FirstSteep(): JSX.Element {
   );
 }
 
-export default FirstSteep;
+export default FirstStep;

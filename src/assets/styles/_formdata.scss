@@ -5,10 +5,20 @@
   padding-top: 48px;
   width: 70%;
 
+  @include small {
+    padding-left: 0px;
+    padding-top: 40px;
+    width: 100%;
+  }
+
   .form-data-back {
     display: flex;
     align-items: center;
     gap: 16px;
+
+    @include small {
+      display: none;
+    }
 
     .form-data-back-steep{
       border: 1px solid $secondary;

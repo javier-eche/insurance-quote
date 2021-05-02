@@ -11,6 +11,10 @@ function Steeps(): JSX.Element{
           <p className="steep-number-two">Arma tu plan</p>
         </div>
       </div>
+      <div className="step-responsive">
+        <p>Paso 2 de 2</p>
+        <div className="step-progress"></div>
+      </div>
     </div>
   );
 }
