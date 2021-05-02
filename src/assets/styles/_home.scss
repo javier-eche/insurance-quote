@@ -74,12 +74,24 @@
             position: relative;
             width: 96px;
 
+            .icons {
+              color: $secondary;
+              font-size: 20px;
+            }
+
             .list {
               background:white;
               border: 1px solid $inputcolor;
               position: absolute;
               bottom: -75px;
               left: 0px;
+
+              .list-item {
+                :hover{
+                  background-color: $secondary;
+                  color: #fff;
+                }
+              }
             }
 
             p {
@@ -114,10 +126,6 @@
           line-height: 20px;
           gap: 18px;
           width: 100%;
-
-          input {
-            background-color: $control;
-          }
         }
 
         .home-form-btn-submit {

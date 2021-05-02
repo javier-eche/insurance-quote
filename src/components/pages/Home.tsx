@@ -45,12 +45,12 @@ function Home(): JSX.Element{
             <div className="home-form-select">
               <div className="home-form-select-list">
                 <p>DNI</p>
-                <RiArrowDownSLine onClick={handleClickToggleList}/>
+                {showList ? <RiArrowUpSLine className="icons" onClick={handleClickToggleList}/> : <RiArrowDownSLine className="icons" onClick={handleClickToggleList}/>}
                 {showList
                 ?(<div className="list">
-                    <p>DNI</p>
-                    <p>CARNET</p>
-                    <p>PASSPORT</p>
+                    <div className="list-item"><p onClick={() => setShowList(!showList)}>DNI</p></div>
+                    <div className="list-item"><p onClick={() => setShowList(!showList)}>CARNET</p></div>
+                    <div className="list-item"><p onClick={() => setShowList(!showList)}>PASSPORT</p></div>
                   </div>
                 ):('')
                 }
