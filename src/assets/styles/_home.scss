@@ -128,11 +128,29 @@
           width: 100%;
         }
 
-        .home-form-btn-submit {
+        .home-form-btn-submit-active {
           background: $secondary;
           border:  none;
           border-radius: 8px;
           color: #fff;
+          cursor: pointer;
+          font-family: 'Lato';
+          font-weight: 700;
+          font-size: 14px;
+          height: 56px;
+          line-height: 16px;
+          width: 192px;
+
+          @include small {
+            width: 100%;
+          }
+        }
+        .home-form-btn-submit-inactive {
+          background: $gray2;
+          border:  none;
+          border-radius: 8px;
+          color: #fff;
+          cursor: pointer;
           font-family: 'Lato';
           font-weight: 700;
           font-size: 14px;

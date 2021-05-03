@@ -6,10 +6,14 @@ import urlIconTheft from './../../../assets/images/icon_theft.svg';
 import urlIconCrash from './../../../assets/images/crash.svg';
 import urlIconTotal from './../../../assets/images/icon_perdidatotal.svg'
 import { useHistory } from 'react-router';
+import { useContext } from 'react';
+import { UserContext } from '../../../assets/context/context';
 
 function SecondStep(): JSX.Element {
 
-  let history = useHistory()
+  let history = useHistory();
+
+  const { amount, aditionalData } = useContext(UserContext);
 
   const handleSubmit = (e:React.FormEvent) => {
     e.preventDefault();
@@ -28,8 +32,8 @@ function SecondStep(): JSX.Element {
         <div className="coverage-info">
           <div className="coverage-info-resume">
             <div className="info-resume">
-              <p className="resume-placa">Placa C2U-114</p>
-              <p className="resume-brand">Wolkswagen 2019<br />Golf</p>
+              <p className="resume-placa">{aditionalData.placa}</p>
+              <p className="resume-brand">{aditionalData.brand} {aditionalData.year}<br />Golf</p>
               <p className="resume-link">EDITAR</p>
             </div>
             <div className="coverage-info-image">
@@ -39,7 +43,7 @@ function SecondStep(): JSX.Element {
           <div className="coverage-info-pricing">
             <div className="pricing-amount">
               <div>
-                <p className="pricing-amount-total">$35.00</p>
+                <p className="pricing-amount-total">${amount}</p>
                 <p className="pricing-amount-period">mensuales</p>
               </div>
               <img src={urlVehicular} alt="" />
@@ -99,7 +103,7 @@ function SecondStep(): JSX.Element {
                 <div>
                   <p className="coverage-item-case">
                     Oli ke aze
-                </p>
+                  </p>
                 </div>
               </div>
             </div>
@@ -125,7 +129,7 @@ function SecondStep(): JSX.Element {
           </div>
           <div className="coverage-actions">
             <div className="coverage-actions-resume">
-              <p className="actions-resume-price">$35.00</p>
+              <p className="actions-resume-price">${amount}</p>
               <p className="actions-resume-period">MENSUAL</p>
             </div>
             <button className="btn-get-coverage">LO QUIERO</button>

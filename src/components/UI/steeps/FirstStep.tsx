@@ -1,12 +1,15 @@
 
 import urlCar from './../../../assets/images/icon_car.svg';
 import { BiPlus, BiMinus } from 'react-icons/bi';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { UserContext } from '../../../assets/context/context';
 
 function FirstStep(): JSX.Element {
 
-  const {user, setStep, amount, setAmount} = useContext(UserContext);
+  const {user, setStep, amount, setAmount, aditionalData, setAditionalData } = useContext(UserContext);
+  const [year, setYear] = useState("");
+  const [brand, setBrand] = useState("");
+  const [gas, setGas] = useState(true);
 
   const handleSubmit = (e:React.FormEvent) => {
     e.preventDefault();
@@ -19,6 +22,21 @@ function FirstStep(): JSX.Element {
 
   const handleClickIncrement = () => {
     amount >= 16500 ? setAmount(16500) : setAmount(amount + 100);
+  }
+
+  const onChangeYear = (e:any) => {
+    setYear(e.target.value);
+    setAditionalData({...aditionalData, year:e.target.value});
+  }
+
+  const onChangeBrand = (e:any) => {
+    setBrand(e.target.value);
+    setAditionalData({...aditionalData, brand:e.target.value});
+  }
+
+  const onValueChange = (e:any) => {
+    setGas(!gas);
+    setAditionalData({...aditionalData, isGas:e.target.value});
   }
 
   return (
@@ -35,11 +53,11 @@ function FirstStep(): JSX.Element {
           <div className="form-data-inputs">
             <div className="form-data-input">
               <label>Año</label>
-              <input type="text" placeholder="2019" />
+              <input type="text" placeholder="2019" value={year} onChange={(e) => onChangeYear(e)} />
             </div>
             <div className="form-data-input">
               <label>Marca</label>
-              <input type="text" placeholder="Wolkswagen" />
+              <input type="text" placeholder="Wolkswagen" value={brand} onChange={(e) => onChangeBrand(e)} />
             </div>
           </div>
           <div className="help-container">
@@ -56,8 +74,8 @@ function FirstStep(): JSX.Element {
           <div className="form-data-choose">
             <p>¿Tu auto es a gas?</p>
             <div className="form-data-isgas">
-              <input type="radio" value="si" name="yes" />Si
-              <input type="radio" value="no" name="no" />No
+              <input type="radio" checked={gas} value="si" name="yes" onChange={onValueChange}/>Si
+              <input type="radio" checked={!gas} value="no" name="yes" onChange={onValueChange}/>No
             </div>
           </div>
           <div className="form-data-amount">
