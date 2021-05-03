@@ -8,6 +8,7 @@ import urlIconTotal from './../../../assets/images/icon_perdidatotal.svg'
 import { useHistory } from 'react-router';
 import { useContext } from 'react';
 import { UserContext } from '../../../assets/context/context';
+import { BiPlus, BiMinus } from 'react-icons/bi';
 
 function SecondStep(): JSX.Element {
 
@@ -78,6 +79,9 @@ function SecondStep(): JSX.Element {
                   </div>
                 </div>
                 <div>
+                  <div className="coverage-item-icon">
+                    <BiMinus />
+                  </div>
                   <p className="coverage-item-case">
                     He salido de casa a las cuatro menos cinco
                     para ir a la academia de ingles de mi pueblo
@@ -101,9 +105,9 @@ function SecondStep(): JSX.Element {
                   </div>
                 </div>
                 <div>
-                  <p className="coverage-item-case">
-                    Oli ke aze
-                  </p>
+                  <div className="coverage-item-icon">
+                    <BiPlus />
+                  </div>
                 </div>
               </div>
             </div>
@@ -119,9 +123,9 @@ function SecondStep(): JSX.Element {
                   </div>
                 </div>
                 <div>
-                  <p className="coverage-item-case">
-                    Oli ke aze
-                </p>
+                  <div className="coverage-item-icon">
+                    <BiPlus />
+                  </div>
                 </div>
               </div>
             </div>

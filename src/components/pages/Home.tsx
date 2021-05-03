@@ -28,7 +28,8 @@ function Home(): JSX.Element{
 
   const handleSubmit = (e:React.FormEvent) => {
     e.preventDefault();
-    history.push('/enter-data')
+    if(aditionalData.dni.length !== 0 && aditionalData.phone.length !== 0 && aditionalData.placa.length !== 0)
+      history.push('/enter-data')
   }
 
   const handleClickToggleList = () => {

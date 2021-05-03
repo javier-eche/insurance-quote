@@ -13,7 +13,8 @@ function FirstStep(): JSX.Element {
 
   const handleSubmit = (e:React.FormEvent) => {
     e.preventDefault();
-    setStep(2);
+    if(aditionalData.year.length !== 0 && aditionalData.brand.length !== 0 )
+      setStep(2);
   }
 
   const handleClickDecrement = () => {

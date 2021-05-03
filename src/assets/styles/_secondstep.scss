@@ -251,6 +251,19 @@
         }
       }
 
+      .coverage-item-icon {
+        color: $primary;
+        border: 1px solid $primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        height: 24px;
+        margin-left: 64px;
+        margin-bottom: 32px;
+        width: 24px;
+      }
+
       .coverage-item-case {
         color: $gray2;
         padding-left: 64px;
