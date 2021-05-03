@@ -103,10 +103,14 @@
       display: flex;
       justify-content: center;
       color: $gray3;
-      font-family: 'Roboto';
-      font-weight: 300;
+      font-family: Roboto;
       font-size: 12px;
+      font-weight: 300;
       line-height: 20px;
+      letter-spacing: 0.2px;
+      text-align: left;
+      
+      padding-top: 50px;
 
       @include small {
         display: none;

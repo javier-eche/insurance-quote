@@ -16,7 +16,7 @@ function Hero(): JSX.Element{
           <p className="hero-description">Cuentanos donde le haras seguimiento a tu seguro</p>
         </div>
         <div className="hero-copyrigth">
-          <p>© 2020 RIMAC Seguros y Reaseguros.</p>
+          © 2020 RIMAC Seguros y Reaseguros.
         </div>         
       </div>     
     </div>
