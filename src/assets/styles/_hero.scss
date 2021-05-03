@@ -60,7 +60,7 @@
       }
 
       @include small {
-        padding: 24px 0px 0px 32px;
+        padding: 15px 0px 0px 32px;
       }
     }
   
@@ -88,6 +88,8 @@
       @include small {
         font-size: 28px;
         letter-spacing: -0.6;
+        padding-top: 8px;
+        padding-bottom: 12px;
       }
     }
   
