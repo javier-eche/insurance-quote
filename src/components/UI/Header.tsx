@@ -1,11 +1,14 @@
 import { ImPhone } from 'react-icons/im';
+import { Link } from 'react-router-dom';
 import urlLogo from '../../assets/images/logo.svg';
 
 function Header(): JSX.Element{
 
   return (
     <div className="header">
-      <img src={urlLogo} alt=""/>
+      <Link to="/">
+        <img src={urlLogo} alt=""/>
+      </Link>
       <div className="header-phone">
         <p className="header-phrase">¿Tienes alguna duda?</p>
         <ImPhone className="header-icon"/>
