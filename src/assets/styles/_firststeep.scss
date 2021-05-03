@@ -1,8 +1,41 @@
+.form-wellcome {
+  display: flex;
+  flex-direction: column;
+
+  @include small {
+    width: 100%;
+    align-items: center;
+  }
+
+  .wellcome-name {
+    color: $gray1;
+    font-family: Lato;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.6px;
+  }
+
+  .wellcome-indication {
+    color: $gray2;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+  }
+}
+
 .form-data-container {
     display: flex;
     align-items: center;
     gap: 64px;
     padding-top: 32px;
+
+    @include small {
+      flex-direction: column;
+      gap: 24px;
+    }
 
     .form-data-inputs {
       display: flex;
@@ -17,6 +50,10 @@
         padding: 8px 16px;
         height: 56px;
         width: 384px;
+
+        @include small {
+          width: 296px;
+        }
 
         label {
           color: $gray3;
@@ -40,6 +77,19 @@
     .help-container{
       display: flex;
       flex-direction: column;
+
+      @include small {
+        background: $gray7;
+        border-radius: 8px;
+        height: 80px;
+        width: 296px;
+      }
+
+      hr {
+        @include small {
+          display: none;
+        }
+      }
   
       .help-title {
         color: $gray1;
@@ -49,6 +99,10 @@
         line-height: 16px;
         letter-spacing: 0.6px;
         padding-bottom: 16px;
+
+        @include small {
+          display: none;
+        }
       }
   
       .help-question {
@@ -70,6 +124,11 @@
           height: 64px;
           width: 64px;
         }
+
+        @include small {
+          flex-direction: row-reverse;
+          justify-content: center;
+        }
       }
   
       .help-link {
@@ -80,6 +139,10 @@
         line-height: 16px;
         letter-spacing: 0.8px;
         padding-top: 16px;
+
+        @include small {
+          display: none;
+        }
       }
     }
 }
@@ -109,12 +172,28 @@ h1 {
     display: flex;
 }
 
-.form-data-choose {
+.form-data-choose-container {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+
+  @include small {
+    align-items: center;
+  }
+
+  .form-data-choose {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 40px;
     width: 384px;
+
+    @include small {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 32px;
+      width: 296px;
+    }
 
     p {
       color: $gray1;
@@ -138,9 +217,19 @@ h1 {
     padding-top: 40px;
     width: 384px;
 
+    @include small {
+      flex-direction: column;
+      padding-top: 32px;
+      width: 296px;
+    }
+
     .amount-info{
       display: flex;
       flex-direction: column;
+
+      @include small {
+        padding-bottom: 16px;
+      }
 
       .amount-info-title {
         color: $gray1;
@@ -172,9 +261,12 @@ h1 {
       height: 56px;
       width: 160px;
 
+      @include small {
+        width: 296px;
+      }
+
       .icon {
         color: $primary;
-        cursor: pointer;
         font-size: 20px;
       }
 
@@ -201,4 +293,9 @@ h1 {
     margin-top: 46px;
     height: 56px;
     width: 192px;
+
+    @include small {
+      width: 296px;
+    }
   }
+}

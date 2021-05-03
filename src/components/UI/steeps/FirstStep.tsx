@@ -23,12 +23,13 @@ function FirstStep(): JSX.Element {
 
   return (
     <>
-      <div>
-        <h1>¡Hola, {user.name.first}!</h1>
+      <div className="form-wellcome">
+        <div>
+          <div><h1 className="wellcome-name">¡Hola, {user.name.first}!</h1></div>
+          <div><p className="wellcome-indication">Completa los datos de tu auto</p></div>
+        </div>
       </div>
-      <div>
-        <p>Completa los datos de tu auto</p>
-      </div>
+
       <form onSubmit={(e) => handleSubmit(e)}>
         <div className="form-data-container">
           <div className="form-data-inputs">
@@ -51,25 +52,27 @@ function FirstStep(): JSX.Element {
             <p className="help-link">CLIC AQUÍ</p>
           </div>
         </div>
-        <div className="form-data-choose">
-          <p>¿Tu auto es a gas?</p>
-          <div className="form-data-isgas">
-            <input type="radio" value="si" name="yes" />Si
-            <input type="radio" value="no" name="no" />No
+        <div className="form-data-choose-container">
+          <div className="form-data-choose">
+            <p>¿Tu auto es a gas?</p>
+            <div className="form-data-isgas">
+              <input type="radio" value="si" name="yes" />Si
+              <input type="radio" value="no" name="no" />No
+            </div>
           </div>
+          <div className="form-data-amount">
+            <div className="amount-info">
+              <p className="amount-info-title">Indica la suma asegurada</p>
+              <p className="amount-info-limits">MIN $12,500 | MAX $16,500</p>
+            </div>
+            <div className="amount-controls">
+              <BiMinus className="icon" onClick={handleClickDecrement} />
+              <p>$ {amount}</p>
+              <BiPlus className="icon" onClick={handleClickIncrement} />
+            </div>
+          </div>
+          <button className="btn-submit">CONTINUAR</button>
         </div>
-        <div className="form-data-amount">
-          <div className="amount-info">
-            <p className="amount-info-title">Indica la suma asegurada</p>
-            <p className="amount-info-limits">MIN $12,500 | MAX $16,500</p>
-          </div>
-          <div className="amount-controls">
-            <BiMinus className="icon" onClick={handleClickDecrement} />
-            <p>$ {amount}</p>
-            <BiPlus className="icon" onClick={handleClickIncrement} />
-          </div>
-        </div>
-        <button className="btn-submit">CONTINUAR</button>
       </form>
     </>
   );
